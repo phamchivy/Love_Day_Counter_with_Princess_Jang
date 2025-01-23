@@ -1,0 +1,132 @@
+/* Import phông chữ mềm mại */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(to bottom, #ffdee9, #ffc1cc);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    margin-top: 20px;
+}
+
+header h1 {
+    font-size: 4rem;
+    font-family: 'Great Vibes', cursive;
+    color: #c2185b;
+    text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.25);
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.counter-container {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px 30px;
+    border-radius: 20px;
+    border: 3px solid #ffc1cc;
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+}
+
+.counter-container {
+    font-size: 2rem;
+    font-family: 'Great Vibes', cursive;
+    color: #c2185b;
+    line-height: 1.8;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.timer span {
+    display: inline-block;
+    width: 70px;
+    /* Cố định chiều rộng */
+    font-weight: bold;
+    font-size: 3rem;
+    color: #ff6f91;
+}
+
+.image-container {
+    width: 250px;
+}
+
+.side-image {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+.digital-gift {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.digital-gift h2 {
+    font-size: 2.5rem;
+    font-family: 'Playfair Display', serif; /* Phông chữ sang trọng */
+    color: #d63384;
+    margin-bottom: 20px;
+    text-shadow: 2px 3px 4px rgba(0, 0, 0, 0.2); /* Tạo chiều sâu */
+}
+
+.video-container {
+    display: flex;
+    flex-direction: row; /* Sắp xếp các video theo chiều dọc */
+    justify-content: center;
+    align-items: center;
+    gap: 50px; /* Khoảng cách giữa các video */
+    margin-bottom: 20px;
+}
+
+.video {
+    flex: 0 0 auto; /* Đảm bảo video không thay đổi kích thước */
+    text-align: center;
+    width: 100%; /* Video chiếm hết chiều rộng */
+    max-width: 450px; /* Giới hạn kích thước video */
+}
+
+video {
+    width: 100%;
+    max-width: 450px; /* Kích thước tối đa cho video */
+    border: 5px solid #d63384;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0; /* Ẩn video ban đầu */
+    transform: scale(0.95); /* Thu nhỏ video ban đầu */
+}
+
+video.playing {
+    opacity: 1; /* Hiện video khi phát */
+    transform: scale(1); /* Phóng to về kích thước gốc */
+}
+
+.digital-gift-title {
+    font-size: 1.3rem;
+    color: #c2185b;
+    font-weight: 600;
+    font-family: 'Playfair Display', serif; /* Phông chữ sang trọng */
+    margin-bottom: 20px; /* Khoảng cách giữa tiêu đề và video */
+    text-align: center; /* Căn tiêu đề sang trái */
+    width: 100%; /* Tiêu đề nằm trên cả hai video */
+}
