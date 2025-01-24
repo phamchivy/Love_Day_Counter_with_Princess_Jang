@@ -24,26 +24,30 @@ updateTimer();
 // Lấy tất cả các video tự động phát
 const videos = document.querySelectorAll('.auto-play-video');
 
-// Sử dụng IntersectionObserver để theo dõi vị trí của video
+// Tự động phát và dừng video dựa trên khung nhìn
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         const video = entry.target;
 
         if (entry.isIntersecting) {
-            video.play(); // Phát video khi xuất hiện trong màn hình
-            video.muted = false; // Bật âm thanh khi video vào khung nhìn
+            video.muted = true;  // Bắt buộc tắt âm thanh để autoplay
+            video.play();        // Phát video khi vào khung nhìn
             video.classList.add('playing'); // Thêm class khi video đang phát
         } else {
-            video.pause(); // Dừng video khi ra khỏi khung nhìn
-            video.muted = true; // Tắt âm thanh
+            video.pause();       // Dừng video khi ra khỏi khung nhìn
             video.classList.remove('playing'); // Thêm class khi video đang phát
         }
     });
-},
-        { threshold: 0.7 }
+}, { threshold: 0.7 }
+
 );
 
 // Gắn observer vào mỗi video
-videos.forEach((video) => observer.observe(video));
-
+videos.forEach(
+    (video) => {
+        observer.observe(video)
+        video.addEventListener('click', () => {
+            video.muted = false; // Bật âm thanh
+        });
+    });
 
