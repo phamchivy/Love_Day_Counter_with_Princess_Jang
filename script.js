@@ -1,8 +1,8 @@
 function updateTimer() {
     const startDate = new Date("2024-12-21T18:00:00");
-    const now = new Date();
+    const endDate = new Date("2025-1-25T20:40:00");
 
-    const difference = Math.abs(now - startDate);
+    const difference = Math.abs(endDate - startDate);
 
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
