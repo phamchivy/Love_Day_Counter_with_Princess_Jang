@@ -1,6 +1,6 @@
 function updateTimer() {
     const startDate = new Date("2024-12-21T18:00:00"); // Lấy thời gian hiện tại
-    const endDate = new Date("2025-01-25T20:40:00"); // Thời gian kết thúc
+    const endDate = new Date("2025-01-27T18:00:00"); // Thời gian kết thúc
 
     const difference = endDate - startDate; // Tính khoảng cách thời gian
 
